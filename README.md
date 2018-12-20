@@ -1,1 +1,10 @@
 # redditcrawl
+
+create authdata.json with this contents:
+{
+	"client_id": "YOUR_ID",
+	"client_secret": "YOUR_SECRET",
+	"password": "YOUR_PASSWORD",
+	"user_agent": "YOUR_APPNAME",
+	"username": "YOUR_REDDIT_USERNAME"
+}
