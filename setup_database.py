@@ -30,10 +30,6 @@ db = mysql.connect(host="localhost",
 cur = db.cursor()
 
 # create table "submission"
-cur.execute("CREATE TABLE submission (
-	id VARCHAR NOT NULL,
-	subreddit VARCHAR NOT NULL,
-	ups INT
-	)"
-	
+cur.execute("CREATE TABLE submission (id VARCHAR NOT NULL, subreddit VARCHAR NOT NULL, ups INT)"
+
 db.commit()
