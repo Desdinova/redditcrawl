@@ -15,7 +15,7 @@ createDB = mysql.connect(host="localhost",  # your host
 curCreateDB = createDB.cursor()
 
 # Create database "redditcrawl"
-curCreateDB.execute("CREATE DATABASE IF NOT EXISTS " + databaseName)
+curCreateDB.execute("CREATE DATABASE IF NOT EXISTS " + databaseName + " CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;")
 createDB.commit()
 
 
