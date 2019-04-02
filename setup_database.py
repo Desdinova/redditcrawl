@@ -24,12 +24,11 @@ createDB.commit()
 db = mysql.connect(host="localhost",
 		   user="root",
 		   passwd="",
-	   database=databaseName
-	   )
+	   database=databaseName)
 
 cur = db.cursor()
 
 # create table "submission"
-cur.execute("CREATE TABLE submission (id VARCHAR NOT NULL, subreddit VARCHAR NOT NULL, ups INT)"
+cur.execute("CREATE TABLE submission (id VARCHAR NOT NULL, subreddit VARCHAR NOT NULL, ups INT)")
 
 db.commit()
