@@ -2,17 +2,20 @@
 
 import MySQLdb as mysql
 
+databaseName = "redditcrawl"
+
 # Connection to MySQL
-db = mysql.connect(host="localhost",  # your host
+createDB = mysql.connect(host="localhost",  # your host
                      user="root",       # username
                      passwd="")     # password
 
-# Cursor to execute queries
-cur = db.cursor()
+# Cursor to create first database
+cur = createDB.cursor()
 
 # create database "redditcrawl"
-cur.execute("CREATE DATABASE IF NOT EXISTS redditcrawl")
+cur.execute("CREATE DATABASE IF NOT EXISTS " + databaseName)
 db.commit()
+
 
 
 
