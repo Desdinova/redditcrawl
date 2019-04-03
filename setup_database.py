@@ -32,4 +32,4 @@ cur.execute("CREATE TABLE submission (id VARCHAR (191) NOT NULL UNIQUE, ups INT,
 db.commit()
 
 # create table "redditor"
-cur.execute("CREATE TABLE reddior (fetched BIT, _path TEXT, _stream TEXT, coins SMALLINT, comment_karma INT, created DATETIME, created_utc DATETIME, )")
+cur.execute("CREATE TABLE reddior (fetched BIT, _path TEXT, _stream TEXT, comment_karma INT, created DATETIME, created_utc DATETIME, has_subscribed BIT, has_verfied_email BIT, icon_img TEXT, id VARCHAR(191) NOT NULL UNIQUE, is_employee BIT, is_friend BIT, is_gold BIT, is_mod BIT, link_karma INT, verified BIT")
