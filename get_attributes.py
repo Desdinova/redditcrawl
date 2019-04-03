@@ -23,7 +23,7 @@ print("=====redditorAttrs=====")
 print("\n")
 
 # Attributes of "redditor"
-redditorAttrs = reddit.redditor(name='desdinovy')
+redditorAttrs = reddit.redditor(name='MinaEdwar')
 print(redditorAttrs.created) # to make it non-lazy
 pprint.pprint(vars(redditorAttrs))
 
