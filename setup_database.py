@@ -32,5 +32,9 @@ cur.execute("CREATE TABLE submission (id VARCHAR (191) NOT NULL UNIQUE, ups INT,
 db.commit()
 
 # create table "redditor"
-cur.execute("CREATE TABLE redditor (id VARCHAR(191) NOT NULL UNIQUE, fetched BIT, _path TEXT, _stream TEXT, comment_karma INT, created DATETIME, created_utc DATETIME, has_subscribed BIT, has_verfied_email BIT, icon_img TEXT, is_employee BIT, is_friend BIT, is_gold BIT, is_mod BIT, link_karma INT, verified BIT)")
+cur.execute("CREATE TABLE redditor (id VARCHAR (191) NOT NULL UNIQUE, _fetched BIT, _path TEXT, _stream TEXT, comment_karma INT, created DATETIME, created_utc DATETIME, has_subscribed BIT, has_verfied_email BIT, icon_img TEXT, is_employee BIT, is_friend BIT, is_gold BIT, is_mod BIT, link_karma INT, verified BIT)")
+db.commit()
+
+# create table "comment"
+cur.execute("CREATE TABLE comment (id VARCHAR (191) NOT NULL UNIQUE, _fetched BIT, _mod TEXT, _replies TEXT, _submission TEXT, approved_at_utc DATETIME, approved_by TEXT, archived BIT, author TEXT, author_flair_text TEXT, author_fullname TINYTEXT, banned_at_utc DATETIME, banned_by TEXT, body LONGTEXT, hody_html LONGTEXT, can_gild BIT, can_mod_post BIT, controversiality FLOAT, created DATETIME, created_utc DATETIME, downs INT, edited BIT, gilded INT, gildings CHAR, is_submitter BIT, likes INT, link_id TINYTEXT, name TINYTEXT, parent_id TINYTEXT, permalink TEXT, score INT, stickied BIT, subreddit TEXT, subreddit_id TINYTEXT, subreddit_name_prefixed TEXT, subreddit_type TINYTEXT, ups INT)")
 db.commit()
