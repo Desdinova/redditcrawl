@@ -29,6 +29,6 @@ for post in reddit.subreddit('linuxadmin').new(limit=5):
 	print(post.id)
 	print(post.created)
 	print(post.title)
-	print(\n)
+	print("\n")
 	# check if entry is present
 	cur.execute("SELECT * FROM submission WHERE id=" + post.id)
