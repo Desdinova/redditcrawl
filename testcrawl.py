@@ -32,3 +32,5 @@ for post in reddit.subreddit('linuxadmin').new(limit=5):
 	print("\n")
 	# check if entry is present
 	cur.execute("SELECT * FROM submission WHERE id='" + post.id + "'")
+	# check if the query results in any rows
+	print(cur.rowcount)
