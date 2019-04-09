@@ -16,5 +16,6 @@ reddit = praw.Reddit(client_id=data["client_id"], client_secret=data["client_sec
 
 
 for post in reddit.subreddit('linuxadmin').new(limit=5):
-	print(post)
-	print("\n")
+	print(post.id)
+	print(post.created)
+	print(post.name)

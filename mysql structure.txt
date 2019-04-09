@@ -1,0 +1,135 @@
+Table "submission":
+show columns from submission;
++-------------------------+--------------+------+-----+---------+-------+
+| Field                   | Type         | Null | Key | Default | Extra |
++-------------------------+--------------+------+-----+---------+-------+
+| id                      | varchar(191) | NO   | PRI | NULL    |       |
+| ups                     | int(11)      | YES  |     | NULL    |       |
+| _fetched                | bit(1)       | YES  |     | NULL    |       |
+| _flair                  | char(1)      | YES  |     | NULL    |       |
+| _mod                    | char(1)      | YES  |     | NULL    |       |
+| approved_at_utc         | datetime     | YES  |     | NULL    |       |
+| approved_by             | tinytext     | YES  |     | NULL    |       |
+| archived                | bit(1)       | YES  |     | NULL    |       |
+| author                  | tinytext     | YES  |     | NULL    |       |
+| author_fullname         | tinytext     | YES  |     | NULL    |       |
+| banned_at_utc           | datetime     | YES  |     | NULL    |       |
+| banned_by               | tinytext     | YES  |     | NULL    |       |
+| clicked                 | bit(1)       | YES  |     | NULL    |       |
+| comment_limit           | smallint(6)  | YES  |     | NULL    |       |
+| contest_mode            | bit(1)       | YES  |     | NULL    |       |
+| created                 | datetime     | YES  |     | NULL    |       |
+| created_utc             | datetime     | YES  |     | NULL    |       |
+| domain                  | text         | YES  |     | NULL    |       |
+| downs                   | mediumint(9) | YES  |     | NULL    |       |
+| edited                  | bit(1)       | YES  |     | NULL    |       |
+| gilded                  | smallint(6)  | YES  |     | NULL    |       |
+| gildings                | char(1)      | YES  |     | NULL    |       |
+| is_crosspostable        | bit(1)       | YES  |     | NULL    |       |
+| is_meta                 | bit(1)       | YES  |     | NULL    |       |
+| is_original_content     | bit(1)       | YES  |     | NULL    |       |
+| is_reddit_media_domain  | bit(1)       | YES  |     | NULL    |       |
+| is_self                 | bit(1)       | YES  |     | NULL    |       |
+| is_video                | bit(1)       | YES  |     | NULL    |       |
+| likes                   | bit(1)       | YES  |     | NULL    |       |
+| locked                  | bit(1)       | YES  |     | NULL    |       |
+| media                   | text         | YES  |     | NULL    |       |
+| media_only              | bit(1)       | YES  |     | NULL    |       |
+| name                    | tinytext     | YES  |     | NULL    |       |
+| no_follow               | bit(1)       | YES  |     | NULL    |       |
+| num_comments            | smallint(6)  | YES  |     | NULL    |       |
+| num_crossposts          | tinyint(4)   | YES  |     | NULL    |       |
+| num_reports             | tinyint(4)   | YES  |     | NULL    |       |
+| over_18                 | bit(1)       | YES  |     | NULL    |       |
+| permalink               | text         | YES  |     | NULL    |       |
+| pinned                  | bit(1)       | YES  |     | NULL    |       |
+| pwls                    | mediumint(9) | YES  |     | NULL    |       |
+| removal_reason          | text         | YES  |     | NULL    |       |
+| report_reasons          | text         | YES  |     | NULL    |       |
+| score                   | mediumint(9) | YES  |     | NULL    |       |
+| selftext                | longtext     | YES  |     | NULL    |       |
+| selftext_html           | longtext     | YES  |     | NULL    |       |
+| spoiler                 | bit(1)       | YES  |     | NULL    |       |
+| stickied                | bit(1)       | YES  |     | NULL    |       |
+| subreddit               | text         | YES  |     | NULL    |       |
+| subreddit_id            | tinytext     | YES  |     | NULL    |       |
+| subreddit_name_prefixed | text         | YES  |     | NULL    |       |
+| subreddit_subscribers   | mediumint(9) | YES  |     | NULL    |       |
+| subreddit_type          | tinytext     | YES  |     | NULL    |       |
+| title                   | text         | YES  |     | NULL    |       |
+| upvote_ratio            | float        | YES  |     | NULL    |       |
+| url                     | text         | YES  |     | NULL    |       |
+| view_count              | mediumint(9) | YES  |     | NULL    |       |
+| wls                     | smallint(6)  | YES  |     | NULL    |       |
++-------------------------+--------------+------+-----+---------+-------+
+
+
+
+Table "comment":
+show columns from comment;
++-------------------------+--------------+------+-----+---------+-------+
+| Field                   | Type         | Null | Key | Default | Extra |
++-------------------------+--------------+------+-----+---------+-------+
+| id                      | varchar(191) | NO   | PRI | NULL    |       |
+| _fetched                | bit(1)       | YES  |     | NULL    |       |
+| _mod                    | text         | YES  |     | NULL    |       |
+| _replies                | text         | YES  |     | NULL    |       |
+| _submission             | text         | YES  |     | NULL    |       |
+| approved_at_utc         | datetime     | YES  |     | NULL    |       |
+| approved_by             | text         | YES  |     | NULL    |       |
+| archived                | bit(1)       | YES  |     | NULL    |       |
+| author                  | text         | YES  |     | NULL    |       |
+| author_flair_text       | text         | YES  |     | NULL    |       |
+| author_fullname         | tinytext     | YES  |     | NULL    |       |
+| banned_at_utc           | datetime     | YES  |     | NULL    |       |
+| banned_by               | text         | YES  |     | NULL    |       |
+| body                    | longtext     | YES  |     | NULL    |       |
+| hody_html               | longtext     | YES  |     | NULL    |       |
+| can_gild                | bit(1)       | YES  |     | NULL    |       |
+| can_mod_post            | bit(1)       | YES  |     | NULL    |       |
+| controversiality        | float        | YES  |     | NULL    |       |
+| created                 | datetime     | YES  |     | NULL    |       |
+| created_utc             | datetime     | YES  |     | NULL    |       |
+| downs                   | int(11)      | YES  |     | NULL    |       |
+| edited                  | bit(1)       | YES  |     | NULL    |       |
+| gilded                  | int(11)      | YES  |     | NULL    |       |
+| gildings                | char(1)      | YES  |     | NULL    |       |
+| is_submitter            | bit(1)       | YES  |     | NULL    |       |
+| likes                   | int(11)      | YES  |     | NULL    |       |
+| link_id                 | tinytext     | YES  |     | NULL    |       |
+| name                    | tinytext     | YES  |     | NULL    |       |
+| parent_id               | tinytext     | YES  |     | NULL    |       |
+| permalink               | text         | YES  |     | NULL    |       |
+| score                   | int(11)      | YES  |     | NULL    |       |
+| stickied                | bit(1)       | YES  |     | NULL    |       |
+| subreddit               | text         | YES  |     | NULL    |       |
+| subreddit_id            | tinytext     | YES  |     | NULL    |       |
+| subreddit_name_prefixed | text         | YES  |     | NULL    |       |
+| subreddit_type          | tinytext     | YES  |     | NULL    |       |
+| ups                     | int(11)      | YES  |     | NULL    |       |
++-------------------------+--------------+------+-----+---------+-------+
+
+
+
+Table "redditor":
+show columns from redditor;
++-------------------+--------------+------+-----+---------+-------+
+| Field             | Type         | Null | Key | Default | Extra |
++-------------------+--------------+------+-----+---------+-------+
+| id                | varchar(191) | NO   | PRI | NULL    |       |
+| _fetched          | bit(1)       | YES  |     | NULL    |       |
+| _path             | text         | YES  |     | NULL    |       |
+| _stream           | text         | YES  |     | NULL    |       |
+| comment_karma     | int(11)      | YES  |     | NULL    |       |
+| created           | datetime     | YES  |     | NULL    |       |
+| created_utc       | datetime     | YES  |     | NULL    |       |
+| has_subscribed    | bit(1)       | YES  |     | NULL    |       |
+| has_verfied_email | bit(1)       | YES  |     | NULL    |       |
+| icon_img          | text         | YES  |     | NULL    |       |
+| is_employee       | bit(1)       | YES  |     | NULL    |       |
+| is_friend         | bit(1)       | YES  |     | NULL    |       |
+| is_gold           | bit(1)       | YES  |     | NULL    |       |
+| is_mod            | bit(1)       | YES  |     | NULL    |       |
+| link_karma        | int(11)      | YES  |     | NULL    |       |
+| verified          | bit(1)       | YES  |     | NULL    |       |
++-------------------+--------------+------+-----+---------+-------+
