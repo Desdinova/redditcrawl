@@ -18,7 +18,7 @@ reddit = praw.Reddit(client_id=data["client_id"], client_secret=data["client_sec
 
 # connection to MySQL database
 db = mysql.connect(host="localhost",
-		   user="root",
+		   user="flno",
 		   passwd="", db="redditcrawl")
 
 cur = db.cursor()
@@ -31,4 +31,4 @@ for post in reddit.subreddit('linuxadmin').new(limit=5):
 	print(post.title)
 	print(\n)
 	# check if entry is present
-	cur.execute("SELECT id FROM submission WHERE id=" + post.id)
+	cur.execute("SELECT * FROM submission WHERE id=" + post.id)
