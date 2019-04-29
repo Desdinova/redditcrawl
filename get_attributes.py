@@ -15,7 +15,7 @@ print("\n")
 
 # Attributes of "comment"
 commentAttrs = reddit.comment(id='e6w0mfh')
-print(commentAttrs.score) # to make it non-lazy
+print(commentAttrs.score)  # to make it non-lazy
 pprint.pprint(vars(commentAttrs))
 
 print("\n")
@@ -24,7 +24,7 @@ print("\n")
 
 # Attributes of "redditor"
 redditorAttrs = reddit.redditor(name='MinaEdwar')
-print(redditorAttrs.created) # to make it non-lazy
+print(redditorAttrs.created)  # to make it non-lazy
 pprint.pprint(vars(redditorAttrs))
 
 print("\n")
@@ -33,5 +33,5 @@ print("\n")
 
 # Attributes of "Submission"
 submissionAttrs = reddit.submission(id='6zub5c')
-print(submissionAttrs.created) # to make it non-lazy
+print(submissionAttrs.created)  # to make it non-lazy
 pprint.pprint(vars(submissionAttrs))
